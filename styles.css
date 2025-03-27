@@ -28,7 +28,7 @@ header {
 }
 
 .product img {
-    width: 20%;
+    width: 400px;
     height: 200px;
     border-radius: 8px;
 }
