@@ -235,6 +235,29 @@
     }
   });
 </script>
+// Assuming the user is logged in
+const user = firebase.auth().currentUser;
+
+if (user) {
+  const orderDetails = {
+    productName: 'Item 1',
+    price: 0.05, // in BTC or USD
+    status: 'Pending',
+    date: new Date().toISOString()
+  };
+
+  // Add the order to Firestore
+  firebase.firestore().collection('orders').add({
+    userId: user.uid,  // Save the user's unique ID
+    ...orderDetails
+  })
+  .then(() => {
+    console.log("Order saved successfully!");
+  })
+  .catch((error) => {
+    console.error("Error saving order:", error);
+  });
+}
 
 
 </body>
