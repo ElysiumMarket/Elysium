@@ -167,6 +167,74 @@
 
 <!-- Sign out -->
 <button id="logout-button" style="display:none;">Log Out</button>
+<script>
+  // Sign-Up function
+  document.getElementById('signup-form-action').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+    
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed up successfully
+        console.log('User signed up:', userCredential.user);
+        alert("User signed up successfully!");
+      })
+      .catch((error) => {
+        console.error(error.message);
+        alert("Error signing up: " + error.message);
+      });
+  });
+
+  // Login function
+  document.getElementById('login-form-action').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+    
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Logged in successfully
+        console.log('User logged in:', userCredential.user);
+        alert("User logged in successfully!");
+      })
+      .catch((error) => {
+        console.error(error.message);
+        alert("Error logging in: " + error.message);
+      });
+  });
+
+  // Logout function
+  document.getElementById('logout-button').addEventListener('click', function() {
+    firebase.auth().signOut()
+      .then(() => {
+        console.log('User logged out');
+        alert("User logged out!");
+      })
+      .catch((error) => {
+        console.error(error.message);
+        alert("Error logging out: " + error.message);
+      });
+  });
+
+  // Listen for changes to authentication state
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is logged in
+      console.log("Logged in as:", user.email);
+      document.getElementById('signup-form').style.display = 'none';
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('logout-button').style.display = 'block';
+    } else {
+      // No user is logged in
+      document.getElementById('signup-form').style.display = 'block';
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('logout-button').style.display = 'none';
+    }
+  });
+</script>
 
 
 </body>
