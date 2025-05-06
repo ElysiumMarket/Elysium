@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Orders - Artemis Market</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .order-history {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+    .order {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .order:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Order History</h1>
+  </header>
+
+  <div class="order-history" id="order-history">
+    <!-- Orders will be inserted here -->
+  </div>
+
+  <script>
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    const container = document.getElementById('order-history');
+
+    if (orders.length === 0) {
+      container.innerHTML = "<p>No orders yet.</p>";
+    } else {
+      orders.forEach(order => {
+        const div = document.createElement('div');
+        div.className = 'order';
+        div.innerHTML = `
+          <strong>Item:</strong> ${order.item} <br>
+          <strong>Price:</strong> ${order.price} <br>
+          <strong>Date:</strong> ${order.date}
+        `;
+        container.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
