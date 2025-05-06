@@ -12,7 +12,7 @@
     <h1>Artemis Market</h1>
     <nav>
         <a href="account.html">My Account</a>
-    <nav>
+    </nav>
 </header>
 
 <div class="product-container">
@@ -22,7 +22,7 @@
         <h3>USA DEBIT (High Bal) & FULL INFO LINE</h3>
         <p>BoA, Chase, Wells Fargo, and Navy Fed Credit Union. One free replacement ALWAYS available.</p>
         <p class="price">0.05 BTC</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="#" class="btn" onclick="buyNow('USA DEBIT (High Bal) & FULL INFO LINE', '0.05 BTC')">Buy Now</a>
     </div>
 
     <!-- Product 2 -->
@@ -31,16 +31,16 @@
         <h3>U.K. DEBIT (High Bal) & FULL INFO LINE</h3>
         <p>Halyfax, HSBC, Barclays, Royal, and more. One free replacement ALWAYS available.</p>
         <p class="price">0.03 ETH</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="#" class="btn" onclick="buyNow('U.K. DEBIT (High Bal) & FULL INFO LINE', '0.03 ETH')">Buy Now</a>
     </div>
 
     <!-- Product 3 -->
     <div class="product">
         <img src="https://raw.githubusercontent.com/ElysiumMarket/Elysium/refs/heads/main/aus.png" alt="AUS DEBIT (Medium Bal) & FULL INFO LINE">
         <h3>AUS DEBIT (Medium Bal) & FULL INFO LINE</h3>
-        <p>Commonwealth, Macquarie, Suncorp, and more. One free replacemenet ALWAYS available. We are working on getting high balance AUS.</p>
+        <p>Commonwealth, Macquarie, Suncorp, and more. One free replacement ALWAYS available. We are working on getting high balance AUS.</p>
         <p class="price">0.02 BTC</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="#" class="btn" onclick="buyNow('AUS DEBIT (Medium Bal) & FULL INFO LINE', '0.02 BTC')">Buy Now</a>
     </div>
 
     <!-- Product 4 -->
@@ -49,7 +49,7 @@
         <h3>GERMANY DEBIT (High Bal) & FULL INFO LINE</h3>
         <p>DZ, Commerz, Deutsche, and a few more One free replacement ALWAYS available.</p>
         <p class="price">0.01 ETH</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="#" class="btn" onclick="buyNow('GERMANY DEBIT (High Bal) & FULL INFO LINE', '0.01 ETH')">Buy Now</a>
     </div>
 
     <!-- Product 5 -->
@@ -58,7 +58,7 @@
         <h3>1oz (INDOOR) BLUE LOBSTER (US ONLY)</h3>
         <p>28 grams of indoor Blue Lobster (original cut from Maine). NO SHIPPING OUTSIDE THE USA. DO NOT ORDER IF YOU ARE OVER-SEAS.</p>
         <p class="price">0.04 BTC</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="#" class="btn" onclick="buyNow('1oz (INDOOR) BLUE LOBSTER (US ONLY)', '0.04 BTC')">Buy Now</a>
     </div>
 
     <!-- Product 6 -->
@@ -67,7 +67,7 @@
         <h3>Raw Garden - Live Rosin Ze Chem</h3>
         <p>3.5g of Live Rosin from Raw Gardens. USA ONLY.</p>
         <p class="price">0.07 ETH</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="#" class="btn" onclick="buyNow('Raw Garden - Live Rosin Ze Chem', '0.07 ETH')">Buy Now</a>
     </div>
 
     <!-- Product 7 -->
@@ -76,7 +76,7 @@
         <h3>AGED PAYPAL ACCOUNT (USA INFO)</h3>
         <p>Designed for DROPS ONLY. ACCOUNT IS EMPTY.</p>
         <p class="price">0.03 BTC</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="#" class="btn" onclick="buyNow('AGED PAYPAL ACCOUNT (USA INFO)', '0.03 BTC')">Buy Now</a>
     </div>
 
     <!-- Product 8 -->
@@ -85,46 +85,15 @@
         <h3>ACE DRAINER INVITE CODE (v2.10.1)</h3>
         <p>PLEASE DO NOT PURCHASE if you are not equipped with the skills to execute this drainer. Contact us for tutorials if needed (free).</p>
         <p class="price">0.05 ETH</p>
-        <a href="#" class="btn">Buy Now</a>
+        <a href="#" class="btn" onclick="buyNow('ACE DRAINER INVITE CODE (v2.10.1)', '0.05 ETH')">Buy Now</a>
     </div>
 
-    <!-- Product 9 -->
-    <div class="product">
-        <img src="item9.jpg" alt="Item 9">
-        <h3>Item 9</h3>
-        <p>One-of-a-kind item description goes here.</p>
-        <p class="price">0.06 BTC</p>
-        <a href="#" class="btn">Buy Now</a>
-    </div>
+    <!-- Other Products -->
+    <!-- Add other products in a similar way... -->
 
-    <!-- Product 10 -->
-    <div class="product">
-        <img src="item10.jpg" alt="Item 10">
-        <h3>Item 10</h3>
-        <p>High-performance product description goes here.</p>
-        <p class="price">0.04 ETH</p>
-        <a href="#" class="btn">Buy Now</a>
-    </div>
-
-    <!-- Product 11 -->
-    <div class="product">
-        <img src="item11.jpg" alt="Item 11">
-        <h3>Item 11</h3>
-        <p>Luxury item description goes here.</p>
-        <p class="price">0.02 BTC</p>
-        <a href="#" class="btn">Buy Now</a>
-    </div>
-
-    <!-- Product 12 -->
-    <div class="product">
-        <img src="item12.jpg" alt="Item 12">
-        <h3>Item 12</h3>
-        <p>Exclusive and rare product description goes here.</p>
-        <p class="price">0.08 ETH</p>
-        <a href="#" class="btn">Buy Now</a>
-    </div>
 </div>
-  <!-- Firebase SDK -->
+
+<!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js"></script>
@@ -146,57 +115,7 @@
   const auth = firebase.auth();
   const db = firebase.firestore();
 
-  // Now you can use Firebase Authentication and Firestore as needed
-</script>
-  <!-- Sign Up Form -->
-<div id="signup-form">
-  <h2>Sign Up</h2>
-  <form id="signup-form-action">
-    <input type="email" id="signup-email" placeholder="Enter your email" required>
-    <input type="password" id="signup-password" placeholder="Enter your password" required>
-    <button type="submit">Sign Up</button>
-  </form>
-</div>
-
-<!-- Login Form -->
-<div id="login-form">
-  <h2>Login</h2>
-  <form id="login-form-action">
-    <input type="email" id="login-email" placeholder="Enter your email" required>
-    <input type="password" id="login-password" placeholder="Enter your password" required>
-    <button type="submit">Log In</button>
-  </form>
-</div>
-<script>
-  // Save order to localStorage
-  function saveOrder(itemName, price) {
-    const orders = JSON.parse(localStorage.getItem('orders')) || [];
-    const newOrder = {
-      item: itemName,
-      price: price,
-      date: new Date().toLocaleString()
-    };
-    orders.push(newOrder);
-    localStorage.setItem('orders', JSON.stringify(orders));
-    alert(`Order placed for ${itemName}`);
-  }
-
-  // Attach event listeners to Buy Now buttons
-  document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const product = button.closest('.product');
-        const itemName = product.querySelector('h3').innerText;
-        const price = product.querySelector('.price').innerText;
-        saveOrder(itemName, price);
-      });
-    });
-  });
-</script>
-<script>
-  // SIGN UP
+  // Sign Up Form
   document.getElementById("signup-form-action").addEventListener("submit", function(e) {
     e.preventDefault();
     const email = document.getElementById("signup-email").value;
@@ -211,7 +130,7 @@
       });
   });
 
-  // LOGIN
+  // Login Form
   document.getElementById("login-form-action").addEventListener("submit", function(e) {
     e.preventDefault();
     const email = document.getElementById("login-email").value;
@@ -225,36 +144,48 @@
         alert("Login error: " + error.message);
       });
   });
-</script>
-<script>
-  document.querySelectorAll('.btn').forEach(button => {
-    button.addEventListener('click', function() {
-      const product = this.closest('.product');
-      const itemName = product.querySelector('h3').innerText;
-      const price = product.querySelector('.price').innerText;
 
-      // Show confirmation prompt
-      const confirmOrder = confirm(`Are you sure you want to buy ${itemName} for ${price}?`);
+  // Coinbase Commerce API Key
+  const COINBASE_COMMERCE_API_KEY = 'your-api-key-here'; // Replace with your API Key
 
-      if (confirmOrder) {
-        const date = new Date().toISOString(); // Current date in ISO format
+  function buyNow(itemName, price) {
+    const checkoutData = {
+        name: itemName,
+        price: price,
+    };
 
-        // Store order in localStorage
-        let orders = JSON.parse(localStorage.getItem('orders')) || [];
-        orders.push({ itemName, price, date });
-
-        localStorage.setItem('orders', JSON.stringify(orders));
-        alert('Order placed: ' + itemName);
-        
-        // You can integrate a crypto payment gateway here if you want to start the payment process
-      } else {
-        alert("Order cancelled.");
-      }
+    // Create a checkout session with Coinbase Commerce
+    fetch('https://api.commerce.coinbase.com/charges', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-Cc-Api-Key': COINBASE_COMMERCE_API_KEY,
+            'X-Cc-Version': '2018-03-22',
+        },
+        body: JSON.stringify({
+            name: checkoutData.name,
+            description: 'Product purchase from Artemis Market',
+            local_price: {
+                amount: parseFloat(price), // Assuming price is numeric
+                currency: 'USD',
+            },
+            pricing_type: 'fixed_price',
+            redirect_url: window.location.href, // Redirect to the current page after payment
+            cancel_url: window.location.href, // Redirect to the current page if the payment is cancelled
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        const checkoutUrl = data.data.hosted_url; // Coinbase Commerce session URL
+        window.location.href = checkoutUrl; // Redirect user to Coinbase Commerce
+    })
+    .catch(error => {
+        alert('Error creating payment session: ' + error.message);
     });
-  });
+  }
 </script>
+
+<script src="https://commerce.coinbase.com/v1/checkout.js"></script>
 
 </body>
 </html>
-
-
