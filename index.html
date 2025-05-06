@@ -164,6 +164,34 @@
     <button type="submit">Log In</button>
   </form>
 </div>
+<script>
+  // Save order to localStorage
+  function saveOrder(itemName, price) {
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    const newOrder = {
+      item: itemName,
+      price: price,
+      date: new Date().toLocaleString()
+    };
+    orders.push(newOrder);
+    localStorage.setItem('orders', JSON.stringify(orders));
+    alert(`Order placed for ${itemName}`);
+  }
+
+  // Attach event listeners to Buy Now buttons
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const product = button.closest('.product');
+        const itemName = product.querySelector('h3').innerText;
+        const price = product.querySelector('.price').innerText;
+        saveOrder(itemName, price);
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
