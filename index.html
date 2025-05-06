@@ -226,6 +226,33 @@
       });
   });
 </script>
+<script>
+  document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const product = this.closest('.product');
+      const itemName = product.querySelector('h3').innerText;
+      const price = product.querySelector('.price').innerText;
+
+      // Show confirmation prompt
+      const confirmOrder = confirm(`Are you sure you want to buy ${itemName} for ${price}?`);
+
+      if (confirmOrder) {
+        const date = new Date().toISOString(); // Current date in ISO format
+
+        // Store order in localStorage
+        let orders = JSON.parse(localStorage.getItem('orders')) || [];
+        orders.push({ itemName, price, date });
+
+        localStorage.setItem('orders', JSON.stringify(orders));
+        alert('Order placed: ' + itemName);
+        
+        // You can integrate a crypto payment gateway here if you want to start the payment process
+      } else {
+        alert("Order cancelled.");
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
