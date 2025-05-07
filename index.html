@@ -1,97 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artemis Market</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Account</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    #logout {
+      margin-top: 20px;
+      background: #f44336;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Artemis Market</h1>
-    <nav>
-        <a href="account.html">My Account</a>
-    </nav>
+  <h1>Artemis Market - Account</h1>
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
 </header>
 
-<div class="product-container">
-    <!-- Product 1 -->
-    <div class="product">
-        <img src="https://raw.githubusercontent.com/ElysiumMarket/Elysium/refs/heads/main/am.png" alt="U.S.A. DEBIT (High Bal) & FULL INFO LINE="Item 1">
-        <h3>USA DEBIT (High Bal) & FULL INFO LINE</h3>
-        <p>BoA, Chase, Wells Fargo, and Navy Fed Credit Union. One free replacement ALWAYS available.</p>
-        <p class="price">0.05 BTC</p>
-        <a href="#" class="btn" onclick="buyNow('USA DEBIT (High Bal) & FULL INFO LINE', '0.05 BTC')">Buy Now</a>
-    </div>
-
-    <!-- Product 2 -->
-    <div class="product">
-        <img src="https://raw.githubusercontent.com/ElysiumMarket/Elysium/refs/heads/main/OIP.jpg" alt="U.K. DEBIT (High Bal) & FULL INFO LINE">
-        <h3>U.K. DEBIT (High Bal) & FULL INFO LINE</h3>
-        <p>Halyfax, HSBC, Barclays, Royal, and more. One free replacement ALWAYS available.</p>
-        <p class="price">0.03 ETH</p>
-        <a href="#" class="btn" onclick="buyNow('U.K. DEBIT (High Bal) & FULL INFO LINE', '0.03 ETH')">Buy Now</a>
-    </div>
-
-    <!-- Product 3 -->
-    <div class="product">
-        <img src="https://raw.githubusercontent.com/ElysiumMarket/Elysium/refs/heads/main/aus.png" alt="AUS DEBIT (Medium Bal) & FULL INFO LINE">
-        <h3>AUS DEBIT (Medium Bal) & FULL INFO LINE</h3>
-        <p>Commonwealth, Macquarie, Suncorp, and more. One free replacement ALWAYS available. We are working on getting high balance AUS.</p>
-        <p class="price">0.02 BTC</p>
-        <a href="#" class="btn" onclick="buyNow('AUS DEBIT (Medium Bal) & FULL INFO LINE', '0.02 BTC')">Buy Now</a>
-    </div>
-
-    <!-- Product 4 -->
-    <div class="product">
-        <img src="https://raw.githubusercontent.com/ElysiumMarket/Elysium/refs/heads/main/german-flag.jpg" alt="GERMANY DEBIT (High Bal) & FULL INFO LINE">
-        <h3>GERMANY DEBIT (High Bal) & FULL INFO LINE</h3>
-        <p>DZ, Commerz, Deutsche, and a few more One free replacement ALWAYS available.</p>
-        <p class="price">0.01 ETH</p>
-        <a href="#" class="btn" onclick="buyNow('GERMANY DEBIT (High Bal) & FULL INFO LINE', '0.01 ETH')">Buy Now</a>
-    </div>
-
-    <!-- Product 5 -->
-    <div class="product">
-        <img src="https://raw.githubusercontent.com/ElysiumMarket/Elysium/refs/heads/main/blue%20lobster.jpg" alt="1oz (INDOOR) BLUE LOBSTER (US ONLY">
-        <h3>1oz (INDOOR) BLUE LOBSTER (US ONLY)</h3>
-        <p>28 grams of indoor Blue Lobster (original cut from Maine). NO SHIPPING OUTSIDE THE USA. DO NOT ORDER IF YOU ARE OVER-SEAS.</p>
-        <p class="price">0.04 BTC</p>
-        <a href="#" class="btn" onclick="buyNow('1oz (INDOOR) BLUE LOBSTER (US ONLY)', '0.04 BTC')">Buy Now</a>
-    </div>
-
-    <!-- Product 6 -->
-    <div class="product">
-        <img src="https://raw.githubusercontent.com/ElysiumMarket/Elysium/refs/heads/main/lerv.jpg" alt="Raw Garden - Live Rosin Ze Chem">
-        <h3>Raw Garden - Live Rosin Ze Chem</h3>
-        <p>3.5g of Live Rosin from Raw Gardens. USA ONLY.</p>
-        <p class="price">0.07 ETH</p>
-        <a href="#" class="btn" onclick="buyNow('Raw Garden - Live Rosin Ze Chem', '0.07 ETH')">Buy Now</a>
-    </div>
-
-    <!-- Product 7 -->
-    <div class="product">
-        <img src="https://raw.githubusercontent.com/ElysiumMarket/Elysium/refs/heads/main/paypal.png" alt="AGED PAYPAL ACCOUNT - USA INFO">
-        <h3>AGED PAYPAL ACCOUNT (USA INFO)</h3>
-        <p>Designed for DROPS ONLY. ACCOUNT IS EMPTY.</p>
-        <p class="price">0.03 BTC</p>
-        <a href="#" class="btn" onclick="buyNow('AGED PAYPAL ACCOUNT (USA INFO)', '0.03 BTC')">Buy Now</a>
-    </div>
-
-    <!-- Product 8 -->
-    <div class="product">
-        <img src="https://raw.githubusercontent.com/ElysiumMarket/Elysium/refs/heads/main/drainer.png" alt="ACE DRAINER INVITE CODE (v2.10.1)">
-        <h3>ACE DRAINER INVITE CODE (v2.10.1)</h3>
-        <p>PLEASE DO NOT PURCHASE if you are not equipped with the skills to execute this drainer. Contact us for tutorials if needed (free).</p>
-        <p class="price">0.05 ETH</p>
-        <a href="#" class="btn" onclick="buyNow('ACE DRAINER INVITE CODE (v2.10.1)', '0.05 ETH')">Buy Now</a>
-    </div>
-
-    <!-- Other Products -->
-    <!-- Add other products in a similar way... -->
-
+<div class="account-info">
+  <p id="userEmail"></p>
+  <button id="logout">Logout</button>
 </div>
+
+<h2>Your Purchases</h2>
+<table id="purchaseTable">
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Price</th>
+      <th>Info</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
 
 <!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
@@ -99,93 +65,65 @@
 <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js"></script>
 
 <script>
-  // Firebase configuration
+  // Firebase config
   const firebaseConfig = {
     apiKey: "AIzaSyAXqkJz7P_fIyzzL5LLE30z0QarqMFf6ME",
     authDomain: "artemis-c603d.firebaseapp.com",
     projectId: "artemis-c603d",
-    storageBucket: "artemis-c603d.firebasestorage.app",
+    storageBucket: "artemis-c603d.appspot.com",
     messagingSenderId: "640697760820",
-    appId: "1:640697760820:web:e51b69d1ba43809f88de61",
-    measurementId: "your-measurement-id"
+    appId: "1:640697760820:web:e51b69d1ba43809f88de61"
   };
 
-  // Initialize Firebase
-  const app = firebase.initializeApp(firebaseConfig);
+  // Init Firebase
+  firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
   const db = firebase.firestore();
 
-  // Sign Up Form
-  document.getElementById("signup-form-action").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const email = document.getElementById("signup-email").value;
-    const password = document.getElementById("signup-password").value;
-    
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then(userCredential => {
-        alert("Sign-up successful!");
-      })
-      .catch(error => {
-        alert("Sign-up error: " + error.message);
-      });
+  // Show user's email and purchases
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      const userEmail = user.email;
+      document.getElementById("userEmail").textContent = `Logged in as: ${userEmail}`;
+
+      // Load purchases from Firestore
+      db.collection("purchases")
+        .where("email", "==", userEmail)
+        .orderBy("timestamp", "desc")
+        .get()
+        .then(snapshot => {
+          const tableBody = document.querySelector("#purchaseTable tbody");
+          tableBody.innerHTML = "";
+
+          snapshot.forEach(doc => {
+            const data = doc.data();
+            const row = document.createElement("tr");
+            row.innerHTML = `
+              <td>${data.item}</td>
+              <td>${data.price}</td>
+              <td>${data.userInfo}</td>
+              <td>${data.timestamp?.toDate().toLocaleString() || ''}</td>
+            `;
+            tableBody.appendChild(row);
+          });
+        })
+        .catch(error => {
+          console.error("Error loading purchases:", error);
+        });
+    } else {
+      window.location.href = "login.html";
+    }
   });
 
-  // Login Form
-  document.getElementById("login-form-action").addEventListener("submit", function(e) {
-    e.preventDefault();
-    const email = document.getElementById("login-email").value;
-    const password = document.getElementById("login-password").value;
-
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(userCredential => {
-        alert("Logged in successfully!");
-      })
-      .catch(error => {
-        alert("Login error: " + error.message);
-      });
-  });
-
-  // Coinbase Commerce API Key
-  const COINBASE_COMMERCE_API_KEY = '4bbd8360-b3c0-4e03-befc-decb4d5f06aa'; // Replace with your API Key
-
-  function buyNow(itemName, price) {
-    const checkoutData = {
-        name: itemName,
-        price: price,
-    };
-
-    // Create a checkout session with Coinbase Commerce
-    fetch('https://api.commerce.coinbase.com/charges', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'X-Cc-Api-Key': COINBASE_COMMERCE_API_KEY,
-            'X-Cc-Version': '2018-03-22',
-        },
-        body: JSON.stringify({
-            name: checkoutData.name,
-            description: 'Product purchase from Artemis Market',
-            local_price: {
-                amount: parseFloat(price), // Assuming price is numeric
-                currency: 'USD',
-            },
-            pricing_type: 'fixed_price',
-            redirect_url: window.location.href, // Redirect to the current page after payment
-            cancel_url: window.location.href, // Redirect to the current page if the payment is cancelled
-        }),
-    })
-    .then(response => response.json())
-    .then(data => {
-        const checkoutUrl = data.data.hosted_url; // Coinbase Commerce session URL
-        window.location.href = checkoutUrl; // Redirect user to Coinbase Commerce
-    })
-    .catch(error => {
-        alert('Error creating payment session: ' + error.message);
+  // Logout
+  document.getElementById('logout').addEventListener('click', () => {
+    auth.signOut().then(() => {
+      window.location.href = 'login.html';
     });
-  }
+  });
 </script>
-
-<script src="https://commerce.coinbase.com/v1/checkout.js"></script>
 
 </body>
 </html>
+
+
